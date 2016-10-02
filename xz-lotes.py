@@ -10,7 +10,7 @@ while files or workers:
         f = files[0]
         files = files[1:]
         w = subprocess.Popen(['xz', f,
-            os.path.splitext(f)[0]'])
+            os.path.splitext(f)[0]])
         workers.append(w)
     for w in list(workers):
         if w.poll() is not None:
