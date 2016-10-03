@@ -1,8 +1,7 @@
-
 #!/usr/bin/python
 import os, time, glob, subprocess
 
-files = glob.glob('*.raw')
+files = glob.glob('*.raw') + glob.glob('*.img')
 
 workers = []
 while files or workers:
