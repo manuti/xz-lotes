@@ -8,7 +8,7 @@ while files or workers:
     while len(workers) < 4 and files:
         f = files[0]
         files = files[1:]
-        w = subprocess.Popen(['xz', '-zkv', f,
+        w = subprocess.Popen(['xz', '-zkvf', f,
             os.path.splitext(f)[0]])
         workers.append(w)
     for w in list(workers):
